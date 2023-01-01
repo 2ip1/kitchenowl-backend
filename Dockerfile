@@ -7,7 +7,8 @@ RUN apt-get update \
     && apt-get install --yes --no-install-recommends \
         gcc g++ libffi-dev libpcre3-dev build-essential cargo \
         libxml2-dev libxslt-dev cmake gfortran libopenblas-dev liblapack-dev pkg-config ninja-build \
-         autoconf automake zlib1g-dev libjpeg62-turbo-dev
+         autoconf automake zlib1g-dev libjpeg62-turbo-dev \
+         curl
 
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 ENV PATH="/root/.cargo/bin:$PATH"
